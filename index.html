@@ -18,7 +18,7 @@
 	      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	    <![endif]-->
 	</head>
-	<body>
+	<body onload="setup();">
 		<!-- static navbar-->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="container">
@@ -44,6 +44,11 @@
 				<div class="col-md-4">Some More Text</div>
 				<div class="col-md-4">Further Text</div>
 			</div>
+
+			<div class="row">
+				<div id="main-canvas"></div>
+			</div>
+
 		</div>
 
 		<!-- jQuery (Bootstrap has JavaScript plugins) -->
@@ -52,5 +57,7 @@
 		<!-- Include all compiled plugins below -->
 		<script src="js/bootstrap.min.js"></script>
 		<script src="js/three.min.js"></script>
+		<script src="js/keyboard.js"></script>
+		<script src="js/mainScene.js"></script>
 	</body>
 </html>
