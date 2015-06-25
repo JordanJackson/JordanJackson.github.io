@@ -21,30 +21,62 @@
 	<body onload="setup();">
 		<!-- static navbar-->
 		<nav class="navbar navbar-default navbar-fixed-top">
-			<div class="container">
+			<div class="container-fluid">
 				<div class="navbar-header">
-
+					<p class="navbar-brand">Jordan Jackson</p>
 				</div>
 			</div>
 		</nav>
 		<!-- Grid contain jumbotron and placeholder text -->
-		<div class="container">
+		<div class="container below-navbar">
 			<div class="row">	
-				<div class="jumbotron main-jumbo">
-					<div class="container">
-						<h1>Jordan Jackson</h1>
-						<p>This github page is currently in development, but will serve as a blog and space to show off my current projects.</p>
-					</div>
+				<div class="col-md-4">
+					<h1>My Projects</h1>
+
 				</div>
 			</div>
-
-		
+	
 			<div class="row">
-				<div class="col-md-4"><a href="threejsexample.html">ThreeJS Test</a></div>
-				<div class="col-md-4"><a href="games/Stacker/Stacker.html">2D Physics Game</a></div>
-				<div class="col-md-4"><a href="games/Dungeon/Dungeon Webplayer.html">Dungeon Game</a></div>
+				<div class="col-md-4"><a href="threejsexample.html" class="project-info">ThreeJS Test</a></div>
+				<div class="col-md-4">
+					<a href="threejsexample.html">
+						<img src="images/threejsexample.png" class="img-responsive">
+					</a>
+				</div>
+				<div class="col-md-4">
+					<a href="https://github.com/JordanJackson/JordanJackson.github.io/blob/master/threejsexample.html" class="project-info">github: threejsexample.html
+					</a>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-4"><a href="games/Stacker/Stacker.html" class="project-info">2D Physics Game</a></div>
+				<div class="col-md-4">
+					<a href="games/Stacker/Stacker.html">
+						<img src="images/stackerScreen.png" class="img-responsive">
+					</a>
+				</div>
+				<div class="col-md-4"><a href="https://github.com/JordanJackson/Unity-Projects/tree/master/2D%20Physics%20Game" class="project-info">github: 2D Physics Game</a></div>
+
+			</div>
+			<div class="row">
+				<div class="col-md-4"><a href="games/Dungeon/Dungeon Webplayer.html" class="project-info">Dungeon Game</a></div>
+				<div class="col-md-4">
+					<a href="games/Dungeon/Dungeon Webplayer.html">
+						<img src="images/dungeonCrawlerScreen.png" class="img-responsive">
+					</a>
+				</div>
+				<div class="col-md-4"><a href="https://github.com/JordanJackson/Unity-Projects/tree/master/Dungeon%20Crawler" class="project-info">github: Dungeon Crawler</a></div>
 			</div>
 		</div>
+
+		<footer class="footer">
+			<div class="container">
+				<p class="text-muted">
+					<a href="https://github.com/JordanJackson">github</a> |
+					<a href="http://stackoverflow.com/users/3641372/jordanjackson">stackoverflow</a>
+				</p>
+			</div>
+		</footer>
 
 		<!-- jQuery (Bootstrap has JavaScript plugins) -->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
