@@ -13,10 +13,6 @@ p {
 	font-size: 1.25em;
 }
 
-.navbar-brand p {
-	font-size: 1em;
-}
-
 a {
 	color: #6E91A1;
 }
@@ -45,6 +41,14 @@ a {
 .project-row {
 	background-color: #022636;
   	margin-bottom: 20px;
+}
+
+.footer {
+	color: #6E91A1;
+}
+
+.header {
+	color: #6E91A1;
 }
 
 .header-row {
