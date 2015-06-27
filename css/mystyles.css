@@ -1,10 +1,24 @@
-html {
-	position: relative;
-	min-height: 100%;
-}
-
 body {
 	margin-bottom: 60px;
+	background-color: #27576B;
+	color: #022636;
+}
+
+h1 {
+	color: #022636;
+}
+
+p {
+	color: #27576B;
+	font-size: 1.25em;
+}
+
+.navbar-brand p {
+	font-size: 1em;
+}
+
+a {
+	color: #6E91A1;
 }
 
 .row {
@@ -12,26 +26,29 @@ body {
 	margin-bottom: 10px;
 }
 
-.footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-
-	height: 60px;
-	background-color: #f0f0f0;
-	text-align: center;
-	font-size: 1.5em;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
 .below-navbar {
 	margin-top: 100px;
 }
 
 .navbar {
+	background-color: #6E91A1;
+}
 
-	background-color: #f0f0f0;
+.navbar-header .navbar-brand {
+  	color: #103D50;
+}
+
+.navbar-default .navbar-nav > li > a {
+  	color: #103D50;
+}
+
+.project-row {
+	background-color: #022636;
+  	margin-bottom: 20px;
+}
+
+.header-row {
+	background-color: #467386;
 }
 
 .project-info {
