@@ -34,12 +34,13 @@ body {
 
 #about-section {
   padding-top: 240px;
-  margin-bottom: 160px;
+  margin-bottom: 200px;
 }
 
 #about-bio-blurb {
   padding-left: 40px;
   padding-right: 40px;
+  font-size: 2em;
 }
 
 #my-face {
@@ -81,6 +82,11 @@ body {
 #contact-section {
   padding: 200px 100px 280px 100px;
   text-align: center;
+  font-size: 2em;
+}
+
+#contact-section div {
+  font-size: 2em;
 }
 
 #contact-social-links {
