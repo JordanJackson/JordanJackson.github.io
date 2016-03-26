@@ -34,7 +34,7 @@ body {
 
 #about-section {
   padding-top: 240px;
-  margin-bottom: 200px;
+  margin-bottom: 240px;
 }
 
 #about-bio-blurb {
@@ -83,10 +83,6 @@ body {
   padding: 200px 100px 280px 100px;
   text-align: center;
   font-size: 2em;
-}
-
-#contact-section div h5 {
-  font-size: 1.25em;
 }
 
 #contact-social-links {
