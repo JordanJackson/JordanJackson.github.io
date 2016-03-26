@@ -34,7 +34,7 @@ body {
 
 #about-section {
   padding-top: 240px;
-  margin-bottom: 240px;
+  margin-bottom: 280px;
 }
 
 #about-bio-blurb {
@@ -45,10 +45,6 @@ body {
 
 #my-face {
   border: 2px solid #090909;
-}
-
-.shield-image {
-  max-height: 120px;
 }
 
 #my-portfolio {
