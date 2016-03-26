@@ -93,9 +93,3 @@ body {
   float: right;
   color: #1a1a1a;
 }
-
-@media (max-width: 400px) {
-  iframe[src*="codepen.io"] {
-    height: 320px !important;
-  }
-}
