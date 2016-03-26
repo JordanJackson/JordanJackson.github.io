@@ -5,11 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- The 3 meta tags above must come first, all other head content must come after -->
-	<title>My Development Blog</title>
+	<title>Jordan Jackson Portfolio</title>
 
 	<!-- Bootstrap -->
 	<link href="css/bootstrap.min.css" rel="stylesheet">
-	<link href="css/mystyles.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -19,87 +19,91 @@
     <![endif]-->
 </head>
 <body>
-	<!-- static navbar-->
-	<nav class="navbar navbar-default">
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<a href="about.html" class="navbar-brand"><p>Jordan Jackson</p></a>
-			</div>
-			<div>
-        		<ul class="nav navbar-nav">
-	          		<li><a href="about.html">About Me</a></li>
-	          		<li><a href="index.html">Projects</a></li>
-								<li><a href="portfolio.html">Portfolio</a></li>
-	        	</ul>
-	      	</div>
-	      	<div>
-	        	<ul class="nav navbar-nav navbar-right">
+	<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">Jordan Jackson</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#page-title">Home</a></li>
+        <li><a href="#about-section">About</a></li>
+        <li><a href="#my-portfolio">Portfolio</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav><!-- navbar -->
 
-	          		<li><a href="https://github.com/JordanJackson">github</a></li>
-	          		<li><a href="http://stackoverflow.com/users/3641372/jordanjackson">stackoverflow</a></li>
-	          		<li><a href="https://www.linkedin.com/profile/view?id=333441449&trk=nav_responsive_tab_profile">linkedin</a></li>
-	        	</ul>
-	      	</div>
-		</div>
-	</nav>
-	<!-- Grid containing page content -->
-	<div class="container below-navbar">
-		<div class="row header-row">
-			<div class="col-md-4">
-				<h1>Projects</h1>
+<div id="main-container" class="container-fluid">
+  <div id="page-title" class="row">
+    <h1 id="page-title-text" class="text-center">Jordan Jackson Web Development</h1>
+    <h3 id="page-title-subtext" class="text-center">Modern and Responsive Design</h3>
+    <ul id="page-title-social-links" class="list-inline text-center">
+      <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
+      <li><a href="#"><i class="fa fa-github"></i> Github</a></li>
+      <li><a href="#"><i class="fa fa-linkedin"></i> Linkedin</a></li>
+      <li><a href="#"><i class="fa fa-fire"></i> freeCodeCamp</a></li>
+    </ul>
+  </div><!-- page-title -->
 
-			</div>
-		</div>
-		<div class="row project-row">
-			<div class="col-md-6">
-				<a href="http://codepen.io/Azgirio/pen/RPxEdy/" class="project-info">ThreeJS Simple Animated Scene</a><br>
-				<p>This is a simple scene I am working on to try and develop my knowledge of three.js animation, rendering and scene hierarchy etc.</p><br>
-				<a href="http://codepen.io/Azgirio/pen/RPxEdy/" class="project-info">Source on CodePen</a>
-			</div>
-			<div class="col-md-6">
-				<a href="http://codepen.io/Azgirio/pen/RPxEdy/">
-					<img src="images/ThreeJSScene.png" class="img-responsive">
-				</a>
-			</div>
-		</div>
-		<div class="row project-row">
-			<div class="col-md-6">
-				<a href="threejsexample.html" class="project-info">ThreeJS Test</a><br>
-				<p>This is a space for me to test out different examples and concepts while I learn ThreeJS.
-					I am hoping to complete a simple game using this library in the near future.<br>Made with: Javascript with three.js</p><br>
-				<a href="https://github.com/JordanJackson/JordanJackson.github.io/blob/master/threejsexample.html" class="project-info">Source on Github</a>
-			</div>
-			<div class="col-md-6">
-				<a href="threejsexample.html">
-					<img src="images/threejsexample.png" class="img-responsive">
-				</a>
-			</div>
-		</div>
-		<div class="row project-row">
-			<div class="col-md-6">
-				<a href="games/Stacker/Stacker.html" class="project-info">2D Physics Game</a><br>
-				<p>This game utilizes Unity's 2D Physics to create a stacking game. There are four different shapes each with their own 2D Collider and four different materials each with their own mass. The player manipulates the objects using a SpringJoint2D. This game was inspired by quill18creates.<br>Made with: C#, Unity</p><br>
-				<a href="https://github.com/JordanJackson/Unity-Projects/tree/master/2D%20Physics%20Game" class="project-info">Source on Github</a>
-			</div>
-			<div class="col-md-6">
-				<a href="games/Stacker/Stacker.html">
-					<img src="images/stackerScreen.png" class="img-responsive">
-				</a>
-			</div>
-		</div>
-		<div class="row project-row">
-			<div class="col-md-6">
-				<a href="games/Dungeon/Dungeon Webplayer.html" class="project-info">Dungeon Game</a><br>
-				<p>This simple game was made with Unity to show off a Map/Dungeon generation tool I created. Given a width and height of a tile map, the algorithm will place rooms (up to a specified number of rooms or failures), and uses a floodfill algorithm to fill the remaining space with corridors. The algorithm then looks for possible connections such that each room is connected to the main network of rooms. All excess corridors are then removed.<br>Made with: C#, Unity</p><br>
-				<a href="https://github.com/JordanJackson/Unity-Projects/tree/master/Dungeon%20Crawler" class="project-info">Source on Github</a>
-			</div>
-			<div class="col-md-6">
-				<a href="games/Dungeon/Dungeon Webplayer.html">
-					<img src="images/dungeonCrawlerScreen.png" class="img-responsive">
-				</a>
-			</div>
-		</div>
-	</div>
+  <div id="about-section">
+    <div class="row">
+      <div id="about-bio-blurb" class="col-md-6">
+        <h2>Jordan Jackson</h2>
+        <p>I'm a self taught web designer, and developer. I am a software and game developer with a Bachelor of Science in Computer Science. I am currently a freelance web and game developer.
+        </p>
+        <h3>Languages and Frameworks</h3>
+        <p>HTML5, CSS3, Javascript, jQuery, PHP, MySQL, Bootstrap3, C#, C/C++</p>
+        <h3>Tools and Software</h3>
+        <p>Github, Responsive Web Design, Unity, Visual Studio</p>
+      </div>
+      <div class="col-md-6">
+        <img id="my-face" class="img-responsive img-circle center-block" src="http://i.imgur.com/DPXad7j.jpg">
+      </div>
+    </div>
+  </div><!-- about section -->
+
+  <div id="my-portfolio" class="row">
+    <h2 class="text-center">Portfolio</h2>
+    <h3 class="text-center">Below you'll find some of my projects and recent work</h3>
+    <div class="row">
+      <div class="col-md-4 col-md-offset-2">
+        <img class="img-responsive center-block" src="http://i.imgur.com/wcxYbgS.png">
+        <div class="portfolio-caption">
+          <h4 class="text-center">
+            ThreeJS Scene
+          </h4>
+          <p class="text-center"><em>Javascript and ThreeJS</em></p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <img class="img-responsive center-block" src="http://i.imgur.com/lMUkf0S.png">
+        <div class="portfolio-caption">
+          <h4 class="text-center">
+            Satoru Iwata Tribute Page
+          </h4>
+          <p class="text-center"><em>Bootstrap and HTML5</em></p>
+        </div>
+      </div>
+    </div>
+  </div><!-- portfolio -->
+
+  <div id="contact-section" class="row">
+    <div class="col-md-6">
+      <h5>Contact Jordan about development opportunities:<br />jordanpatrickjackson@gmail.com</h5>
+    </div>
+    <div class="col-md-6">
+      <ul id="contact-social-links" class="list-inline">
+      <li><a  href="https://twitter.com/JordanJacksonCS"><i class="fa fa-twitter"></i> Twitter</a></li>
+      <li><a href="https://github.com/JordanJackson"><i class="fa fa-github"></i> Github</a></li>
+      <li><a href="https://www.linkedin.com/in/jordan-jackson-97580393"><i class="fa fa-linkedin"></i> Linkedin</a></li>
+      <li><a href="http://www.freecodecamp.com/jordanjackson"><i class="fa fa-fire"></i> freeCodeCamp</a></li>
+    </ul>
+    </div>
+  </div><!-- contact-section -->
+
+</div><!-- main-container/container-fluid -->
 
 	<!-- jQuery (Bootstrap has JavaScript plugins) -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
