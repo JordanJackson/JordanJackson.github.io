@@ -67,6 +67,10 @@ body {
   margin-bottom: 40px;
 }
 
+#my-portfolio .row div {
+  padding: 20px;
+}
+
 .portfolio-caption {
   background-color: #dedede;
   color: #1a1a1a;
