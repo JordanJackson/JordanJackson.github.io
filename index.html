@@ -94,33 +94,53 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/fighter-demo.gif" class="img-responsive" alt="">
-						
-                    </a>
-					<a href="https://github.com/JordanJackson/Fighter">
-						<p>GitHub</p>
-					</a>
+				<div class="col-sm-4 portfolio-item">
+					<h3 style="text-align:center" >Project Chronos</h3>
+						<a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+							<div class="caption">
+								<div class="caption-content">
+									<i class="fa fa-search-plus fa-3x"></i>
+								</div>
+							</div>
+							<img src="img/portfolio/MainLogo.png" style="margin:auto; max-height:220px;" class="img-responsive" alt="Project Chronos Title Logo">
+						</a>
+					<p>
+						A 2.5D Platformer with Time Manipulation mechanics. Made in Unity as part of a capstone project at Sheridan College.
+					</p>
                 </div>
+
                 <div class="col-sm-4 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="caption">
-                            <div class="caption-content">
-                                <i class="fa fa-search-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/battery-bot-demo.gif" class="img-responsive" alt="">
-                    </a>
-					<a href="https://github.com/JordanJackson/Battery-Bot">
-						<p>GitHub</p>
-					</a>
+					<h3 style="text-align:center" >MechLords</h3>
+						<a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+							<div class="caption">
+								<div class="caption-content">
+									<i class="fa fa-search-plus fa-3x"></i>
+								</div>
+							</div>
+							<img src="img/portfolio/MechLords-demo.gif" style="margin:auto; max-height:220px;" class="img-responsive" alt="MechLords Gameplay">
+							
+						</a>
+					<p>
+						A Multiplayer FPS vs RTS game made in Unity with VR and Kinect support.
+					</p>
                 </div>
+				
+				<div class="col-sm-4 portfolio-item">
+					<h3 style="text-align:center" >Strike Engine</h3>
+						<a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+							<div class="caption">
+								<div class="caption-content">
+									<i class="fa fa-search-plus fa-3x"></i>
+								</div>
+							</div>
+							<img src="img/portfolio/StrikeEngine.png" style="margin:auto; max-height:220px;" class="img-responsive" alt="Strike Engine Logo">
+							
+						</a>
+					<p>
+						A 3D Game Engine/Framework being developed in C++ with OpenGL.
+					</p>
+                </div>
+				<!--
                 <div class="col-sm-4 portfolio-item">
                     <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
                         <div class="caption">
@@ -151,6 +171,7 @@
                 </div>
 				<div class="col-sm-4 portfolio-item">
 				</div>
+				-->
             </div>
         </div>
     </section>
@@ -286,121 +307,6 @@
     </div>
 	
 	<!-- Portfolio Modals -->
-	<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Super Bot Fighter</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/fighter-demo.gif" class="img-responsive img-centered" alt="">
-                            <p></p>
-                            <ul class="list-inline item-details">
-                                <li>Development Tools:
-                                    <strong>Unity 3D
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">December 2016</a>
-                                    </strong>
-                                </li>
-                                <li>Description:
-                                    <strong><a href="http://startbootstrap.com">Fighter game using animation to drive gameplay.</a>
-                                    </strong>
-                                </li>
-                            </ul>
-							<div align="left">
-								<pre class="prettyprint lang-c linenums">
-#ifndef _GAMEOBJECT_H_
-#define _GAMEOBJECT_H_
-#pragma once
-
-#include "Object.h"
-
-class Component;
-class Transform;
-class GameObjectManager;
-
-class GameObject final : public Object
-{
-	friend class GameObjectManager;
-
-	DECLARE_DYNAMIC_DERIVED_CLASS(GameObject, Object)
-
-private:
-	STRCODE fileID;
-	STRCODE UID;
-	std::string name;
-	bool saveAble;
-
-	std::multimap<STRCODE, Component*> components;
-
-	// We didn't make it and its safe in the component array
-	Transform* transform;
-
-public:
-	GameObject* parent;
-	std::list<GameObject*> children;
-
-public:
-	~GameObject();
-	
-	STRCODE getFileID() { return fileID; }
-	void setFileID(STRCODE _fileID) { fileID = _fileID; }
-
-	void setUID(STRCODE uid) { UID = uid; }
-	STRCODE getUID() { return UID; }
-
-	const std::string& getName() { return name; }
-
-	void setTransform(Transform* trans) { transform = trans; }
-	Transform* getTransform() { return transform; }
-
-	void AddComponent(Component* component);
-	void RemoveComponent(STRCODE component);
-
-	//collisions:
-	void OnCollisionEnter(GameObject* collision);
-
-	//Name of this has to be changed to "GetComponentByTypeName", being used in RenderSystem at the moment, must speak with a member
-	Component* GameObject::GetComponentByType(std::string className);
-	
-	std::multimap<STRCODE, Component*>& getComponents() { return components; }
-	std::list<GameObject*>& getChildren() { return children; }
-
-	Component* GetComponentByUUID(STRCODE uuid);
-	Component* GetComponent(std::string& comp);
-
-	virtual void update(float deltaTime);
-
-	void load(XMLElement* node);
-	void save(XMLElement* node);
-
-	bool isSaveAble();
-	void AddChild(GameObject*);
-	void RemoveChild(GameObject*);
-	GameObject* getChildByName(std::string name);
-
-};
-
-#endif
-
-</pre>
-							</div>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 	<div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-content">
             <div class="close-modal" data-dismiss="modal">
@@ -413,21 +319,62 @@ public:
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Battery Bot</h2>
+                            <h2>MechLords</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
+                            <img src="img/portfolio/MechLords-demo.gif" class="img-responsive img-centered" alt="">
                             <p></p>
                             <ul class="list-inline item-details">
                                 <li>Development Tools:
-                                    <strong><a href="http://startbootstrap.com">Unity 3D</a>
+                                    <strong>Unity 3D, Oculus Rift, Microsoft Kinect
                                     </strong>
                                 </li>
                                 <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    <strong>April 2017
                                     </strong>
                                 </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                <li>Description:
+                                    <strong>A Multiplayer FPS vs RTS game made in Unity with VR and Kinect support.
+                                    </strong>
+                                </li>
+                            </ul>
+							<p>
+								MechLords is an assymetric multiplayer game made by myself and Cameron Micomonaco. 
+							</p>
+
+                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+	<div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <h2>Project Chronos</h2>
+                            <hr class="star-primary">
+                            <img src="img/portfolio/MainLogo.png" class="img-responsive img-centered" alt="">
+                            <p></p>
+                            <ul class="list-inline item-details">
+                                <li>Development Tools:
+                                    <strong>Unity 3D
+                                    </strong>
+                                </li>
+                                <li>Date:
+                                    <strong>April 2017 - Present
+                                    </strong>
+                                </li>
+                                <li>Description:
+                                    <strong>A 2.5D Platformer with Time Manipulation mechanics. Made in Unity as part of a capstone project at Sheridan College.
                                     </strong>
                                 </li>
                             </ul>
@@ -450,24 +397,158 @@ public:
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2">
                         <div class="modal-body">
-                            <h2>Navmesh-Pathfinding</h2>
+                            <h2>Strike Engine</h2>
                             <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
+                            <img src="img/portfolio/StrikeEngine.png" class="img-responsive img-centered" alt="">
                             <p></p>
                             <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
+                                <li>Development Tools:
+                                    <strong>C++, OpenGL, Visual Studio, GLFW, GLEW, SOIL, Assimp
                                     </strong>
                                 </li>
                                 <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
+                                    <strong><a href="http://startbootstrap.com">June 2017 - Present</a>
                                     </strong>
                                 </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
+                                <li>Description:
+                                    <strong><a href="http://startbootstrap.com">A 3D Game Engine/Framework being developed in C++ with OpenGL.</a>
                                     </strong>
                                 </li>
                             </ul>
+							<p>
+								The following code snippet is the header file for the RenderSystem. Currently this render system maintains references to all IRenderables, Components that
+								implement the IRenderable interface. The RenderSystem first draws all opaque geometry, followed by transparent geometry, in the order of decreasing distance
+								from the Camera. The vector of transparent renderables is sorted when the Camera transform is changed.
+							</p>
+							<div align="left">
+								<pre class="prettyprint lang-c linenums">
+#ifndef _SRC_RENDERSYSTEM_H_
+#define _SRC_RENDERSYSTEM_H_
+#pragma once
+
+#include <algorithm>
+#include <vector>
+
+#include "Camera.h"
+#include "Component.h"
+
+class IRenderable;
+
+class RenderSystem
+{
+private:
+	Camera* camera;
+
+private:
+	std::vector<IRenderable*> opaqueRenderables;
+	std::vector<IRenderable*> transparentRenderables;
+
+public:
+	// singleton Instance accessor
+	inline static RenderSystem& Instance()
+	{
+		static RenderSystem instance;
+		return instance;
+	}
+
+	void Render();
+
+	inline Camera& GetCamera() const { return *camera; }
+	inline void SetCamera(Camera* camera) { this->camera = camera; camera->Initialize(); }
+
+	void AddRenderable(IRenderable* renderable);
+	void RemoveRenderable(IRenderable* renderable);
+	void SortRenderablesByDistance();
+
+private:
+	void LoadSettings();
+
+
+// enforces singleton
+private:
+	RenderSystem() = default;
+	~RenderSystem() = default;
+	RenderSystem(RenderSystem const&) = delete;
+};
+
+#endif
+</pre>
+							</div>
+							<p>
+								This is the source (.cpp) file for the aforementioned RenderSystem.
+							</p>
+							<div align="left">
+								<pre class="prettyprint lang-c linenums">
+#include "RenderSystem.h"
+
+#include "IRenderable.h"
+
+void RenderSystem::Render()
+{
+	for (auto renderable : opaqueRenderables)
+	{
+		renderable->Render(camera->GetViewMatrix(), camera->GetProjectionMatrix());
+	}
+
+	for (auto renderable : transparentRenderables)
+	{
+		renderable->Render(camera->GetViewMatrix(), camera->GetProjectionMatrix());
+	}
+}
+
+void RenderSystem::AddRenderable(IRenderable* renderable)
+{
+	if (renderable->GetMaterial().Transparent())
+	{
+		transparentRenderables.push_back(renderable);
+	}
+	else
+	{
+		opaqueRenderables.push_back(renderable);
+	}
+}
+
+void RenderSystem::RemoveRenderable(IRenderable* renderable)
+{
+	if (renderable->GetMaterial().Transparent())
+	{
+	std::vector<IRenderable*>::iterator it;
+	it = std::find(transparentRenderables.begin(), transparentRenderables.end(), renderable);
+	// if it exists in renderables, erase
+	if (it != transparentRenderables.end())
+	{
+		transparentRenderables.erase(it);
+	}
+	}
+	else
+	{
+		std::vector<IRenderable*>::iterator it;
+		it = std::find(transparentRenderables.begin(), transparentRenderables.end(), renderable);
+		// if it exists in renderables, erase
+		if (it != transparentRenderables.end())
+		{
+			transparentRenderables.erase(it);
+		}
+	}
+	// TODO consider changing this to erase/remove idiom
+}
+
+void RenderSystem::SortRenderablesByDistance()
+{
+	if (camera == nullptr)
+	{
+		return;
+	}
+	std::sort(transparentRenderables.begin(), transparentRenderables.end(), [this](IRenderable* a, IRenderable* b)
+	{
+		return 
+			glm::distance2(this->GetCamera().Transform().GetPosition(), a->Transform().GetPosition())
+			>
+			glm::distance2(this->GetCamera().Transform().GetPosition(), b->Transform().GetPosition());
+	});
+}
+</pre>
+							</div>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                         </div>
                     </div>
