@@ -421,13 +421,14 @@
 								from the Camera. The vector of transparent renderables is sorted when the Camera transform is changed.
 							</p>
 							<div align="left">
-								<pre class="prettyprint lang-c linenums">
+								<pre class="lang-cpp prettyprint" style>
+								<code>
 #ifndef _SRC_RENDERSYSTEM_H_
 #define _SRC_RENDERSYSTEM_H_
 #pragma once
 
-#include <algorithm>
-#include <vector>
+#include &ltalgorithm>
+#include &ltvector>
 
 #include "Camera.h"
 #include "Component.h"
@@ -440,8 +441,8 @@ private:
 	Camera* camera;
 
 private:
-	std::vector<IRenderable*> opaqueRenderables;
-	std::vector<IRenderable*> transparentRenderables;
+	std::vector&ltIRenderable*> opaqueRenderables;
+	std::vector&ltIRenderable*> transparentRenderables;
 
 public:
 	// singleton Instance accessor
@@ -472,13 +473,15 @@ private:
 };
 
 #endif
+</code>
 </pre>
 							</div>
 							<p>
 								This is the source (.cpp) file for the aforementioned RenderSystem.
 							</p>
 							<div align="left">
-								<pre class="prettyprint lang-c linenums">
+								<pre class="prettyprint lang-cpp" style>
+								<code>
 #include "RenderSystem.h"
 
 #include "IRenderable.h"
@@ -512,7 +515,7 @@ void RenderSystem::RemoveRenderable(IRenderable* renderable)
 {
 	if (renderable->GetMaterial().Transparent())
 	{
-	std::vector<IRenderable*>::iterator it;
+	std::vector&ltIRenderable*>::iterator it;
 	it = std::find(transparentRenderables.begin(), transparentRenderables.end(), renderable);
 	// if it exists in renderables, erase
 	if (it != transparentRenderables.end())
@@ -522,7 +525,7 @@ void RenderSystem::RemoveRenderable(IRenderable* renderable)
 	}
 	else
 	{
-		std::vector<IRenderable*>::iterator it;
+		std::vector&ltIRenderable*>::iterator it;
 		it = std::find(transparentRenderables.begin(), transparentRenderables.end(), renderable);
 		// if it exists in renderables, erase
 		if (it != transparentRenderables.end())
@@ -547,6 +550,7 @@ void RenderSystem::SortRenderablesByDistance()
 			glm::distance2(this->GetCamera().Transform().GetPosition(), b->Transform().GetPosition());
 	});
 }
+</code>
 </pre>
 							</div>
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
