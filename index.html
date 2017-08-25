@@ -189,7 +189,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-4">
-                    <p>Jordan is currently attending Sheridan College's Game Development Advanced Programming program. <br/>Jordan is seeking employment as a Game Programmer and is most interested in AI, Animation and Graphics.</p>
+                    <p>Jordan is a graduate of Sheridan College's Game Development Advanced Programming post-graduate program, and has a BSc in Computer Science from Brock University.<br/>Jordan is seeking employment as a Game Programmer and is most interested in AI, Animation and Graphics.</p>
                 </div>
 				<div class="col-lg-4">
 				</div>
@@ -338,48 +338,77 @@
                                 </li>
                             </ul>
 							<p>
-								MechLords is an assymetric multiplayer game made by myself and Cameron Micomonaco. 
+								MechLords is an asymmetric multiplayer game made by myself and Cameron Micomonaco. One player plays as the Overlord with mouse and keyboard, spawning and controlling
+								units like a standard Real-Time Strategy game. The other players play as Mechs in a First-Person Shooter perspective. The Mechs are controlled with a gamepad, Oculus Rift and Kinect.
+								The Kinect is used to aim the player's gun, the Oculus orients the camera and the gamepad is used to steer and fire.
+								<br/>
+							</p>
+							<p>
+								My primary responsibilities for this game were the Overlord UI and controls, the AI and Animation for the units and the multiplayer lobby.
+								<br/>
+								<br/>
 							</p>
 							<div class="row">
 								<div class="col-lg-6">
-									<img src="img/portfolio/mechlords/Grunt-Behaviour-Tree.png" class="img-responsive img-centered" alt="">
+									<p>
+										<b>Grunt Behaviour Tree:</b><br/>
+										The Grunt acts as the basic melee unit. When spawned into the battleground, the Grunt will wander
+										until detecting a target. It prioritizes enemy players before the enemy base. If given a waypoint
+										by the Overlord, it will approach that waypoint until a target is detected.
+										<br/>
+										Upon detecting a target, the Grunt will approach the target. When within the specified attack
+										range, it will begin its attack. The grunt will play its attack animation and using an animation
+										event, will check if the attack lands the hit or not, dealing its damage to the target.
+									</p>
 								</div>
 								<div class="col-lg-6">
-									<p>
-										Grunt Behaviour Tree.
-									</p>
+									<img src="img/portfolio/mechlords/Grunt-Behaviour-Tree.png" class="img-responsive img-centered" alt="">
 								</div>
 							</div>
 							<div class="row">
+								<div class="col-lg-6">
+									<p>
+										<b>Gunner Behaviour Tree.</b><br/>
+										The Gunner is a ranged unit. It has fewer health points than the Gunner, but is able to 
+										fire a laser at its target from a distance. This allows the Overlord to potentially overwhelm the
+										Mechs by spreading Gunners about their position. The Gunner's Behaviour Tree is identical to the 
+										Grunt's tree, but differs in its attack range, animation and hit detection.
+									</p>
+								</div>
 								<div class="col-lg-6">
 									<img src="img/portfolio/mechlords/Gunner-Behaviour-Tree.png" class="img-responsive img-centered" alt="">
 								</div>
-								<div class="col-lg-6">
-									<p>
-										Gunner Behaviour Tree.
-									</p>
-								</div>
 							</div>
 							<div class="row">
 								<div class="col-lg-6">
-									<img src="img/portfolio/mechlords/Rogue-Behaviour-Tree.png" class="img-responsive img-centered" alt="">
-								</div>
-								<div class="col-lg-6">
 									<p>
-										Rogue Behaviour Tree.
+										<b>Tank Behaviour Tree.</b><br/>
+										The Tank is a high-health defensive unit with a large shield. It's purpose is to
+										be a distraction, and also to defend the other units, primarily the Gunner. The Tank
+										does not attack.
+										<br/>
+										The Tank wanders and detects targets like the other units, however upon detecting an
+										enemy Mech, it will check for a nearby Gunner. If a Gunner is nearby, the Tank will position
+										itself between the Mech and the Gunner, allowing the Gunner to attack behind the safety of
+										the Tank's shield. If there is no Gunner nearby, the Tank will position itself at a distance
+										in front of the Mech.
 									</p>
 								</div>
-							</div>
-							<div class="row">
 								<div class="col-lg-6">
 									<img src="img/portfolio/mechlords/Tank-Behaviour-Tree.png" class="img-responsive img-centered" alt="">
 								</div>
+							</div>
+							<div class="row">
 								<div class="col-lg-6">
 									<p>
-										Tank Behaviour Tree.
+										<b>Rogue Behaviour Tree.</b>
 									</p>
 								</div>
+								<div class="col-lg-6">
+									<img src="img/portfolio/mechlords/Rogue-Behaviour-Tree.png" class="img-responsive img-centered" alt="">
+								</div>
 							</div>
+
                             <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i>Close</button>
                         </div>
                     </div>
